@@ -11,10 +11,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DefaultFooPlugin extends Plugin implements FooAbilityPoint {
 
-//    @Require(beanId = "goodsService", phases = {PhaseEnum.InboundSaleOrder})
-//    protected GoodsService goodsService;
-
-
 
 
     private String fooName = "defaultFooName";

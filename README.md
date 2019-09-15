@@ -32,7 +32,7 @@
   
 -  具体功能点
   
-  业务能力点的一部分,在代码维度可能是能力点/插件中的一个方法,实现某个细化具体功能.- 
+  业务能力点的一部分,在代码维度可能是能力点/插件中的一个方法,实现某个细化具体功能.
   
 - 阶段(Phase)
 
@@ -122,7 +122,48 @@ System.out.println(cmd.getReply());
 
 ## 代码结构
 
-
+```
+├── ability-core   核心包
+│   ├── ability-core.iml
+│   ├── pom.xml
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── arch
+│       │   │           └── ability
+│       │   │               ├── annotation  相关注解
+│       │   │               │   ├── BusinessDomainEnum.java
+│       │   │               │   ├── BusinessDomain.java
+│       │   │               │   ├── package-info.java
+│       │   │               │   ├── PhaseEnum.java
+│       │   │               │   ├── Phase.java
+│       │   │               │   ├── RegisterPlugin.java
+│       │   │               │   └── Require.java
+│       │   │               ├── cmd       命令
+│       │   │               │   ├── BaseCmd.java
+│       │   │               │   ├── BaseReply.java
+│       │   │               │   └── package-info.java
+│       │   │               ├── exception  异常
+│       │   │               ├── identity     业务身份
+│       │   │               │   ├── BusinessIdentity.java
+│       │   │               │   └── Identifier.java
+│       │   │               ├── PluginContext.java  插件上下文
+│       │   │               ├── PluginContextWrapper.java
+│       │   │               ├── Plugin.java
+│       │   │               ├── Registry.java    注册中心
+│       │   │               ├── RequirementManager.java  依赖管理
+│       │   │               ├── router   路由相关
+│       │   │               └── utils
+│       │   │                   └── AopTargetUtils.java
+│       │   └── resources
+│       │       └── application.properties
+│       └── test
+├── ability-dependency-manage      依赖管理工程
+├── plugin-architype     示范模板工程，以订单明细合并为例子
+├── pom.xml
+├── README.md
+```
 
 
 
@@ -132,7 +173,7 @@ System.out.println(cmd.getReply());
 
 - [ ] 拦截器体系
 
-- [ ] 增加测试用例
+- [ ] 完善测试用例
 
   
 
